@@ -1,0 +1,329 @@
+:root {
+  --azul-profundo: #0A2A43;
+  --azul-secundario: #124E78;
+  --azul-claro: #E6F0F7;
+  --blanco: #FFFFFF;
+  --gris-texto: #2E2E2E;
+  --gris-borde: #D9D9D9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--azul-claro);
+  color: var(--gris-texto);
+}
+
+/* ===== HEADER ===== */
+header, .header {
+  background: linear-gradient(135deg, #0c4675, #123e63);
+  color: white;
+  padding: 16px;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ===== CONTENIDO ===== */
+.contenido {
+  padding: 16px;
+  max-width: 1200px;
+  /* PC */
+  margin: 0 auto;
+  background: #f2f4f7;
+  min-height: 100vh;
+}
+
+
+h2 {
+  margin-bottom: 16px;
+}
+
+/* ===== BOTONES DE MÉTODOS ===== */
+.metodos-pago {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.metodo {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--gris-borde);
+  background-color: var(--blanco);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.metodo.activo {
+  background-color: var(--azul-secundario);
+  color: var(--blanco);
+  border-color: var(--azul-secundario);
+}
+
+/* ===== ESTADO DEL DÍA ===== */
+.estado-dia {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.estado-dia.abierto {
+  background: #e6ffea;
+  color: #056b2d;
+}
+
+.estado-dia.cerrado {
+  background: #ffe5e5;
+  color: #a40000;
+}
+
+/* ===== FILTRO DE LÍNEAS ===== */
+.filtro-lineas {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.linea-btn {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.linea-btn.activo {
+  background: #0c4675;
+  color: white;
+}
+
+/* ===== BUSCADOR ===== */
+.buscador {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* ===== BOTÓN PRINCIPAL ===== */
+.btn-principal {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #0c4675, #2563eb);
+  color: var(--blanco);
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== BOTÓN SECUNDARIO ===== */
+.btn-secundario {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: #e5e7eb;
+  color: #111827;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== VENTAS ===== */
+.venta {
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.venta p {
+  margin: 0;
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ===== LISTA DE PRODUCTOS ===== */
+.lista-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.lista-productos::-webkit-scrollbar {
+  height: 6px;
+}
+
+.lista-productos::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.producto {
+  flex: 0 0 auto;
+  /* no se encoge */
+  min-width: 160px;
+  
+  background: white;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.02);
+}
+
+.producto.activo {
+  border-color: var(--azul-profundo);
+  background-color: #e8f0ff;
+  transform: scale(1.03);
+}
+
+.producto .nombre {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.producto .precio {
+  margin-top: 6px;
+  font-weight: bold;
+  color: var(--azul-profundo);
+}
+
+/* ===== HISTORIAL ===== */
+.historial-dia {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.historial-header {
+  padding: 12px;
+  background: #f1f5f9;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.historial-detalle {
+  padding: 10px;
+  background: #fafafa;
+}
+
+.historial-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.vacio {
+  text-align: center;
+  color: #777;
+}
+
+/* ===== RESUMEN MENSUAL ===== */
+.toggle-titulo {
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.resumen {
+  margin-top: 10px;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 500px) {
+  .lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    overflow-x: visible;
+    /* eliminar scroll */
+  }
+
+  .producto {
+    flex: 1;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenido {
+    max-width: 420px;
+    /* celular */
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lista-productos {
+    display: flex;
+  }
+
+  .producto {
+    min-width: 160px;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+/* ===== LAYOUT PC ===== */
+@media (min-width: 900px) {
+  .layout-pc {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .reporte-sticky {
+    position: sticky;
+    top: 90px;
+  }
+}
