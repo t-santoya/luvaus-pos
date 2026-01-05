@@ -174,28 +174,29 @@ h2 {
   cursor: pointer;
 }
 
-/* ===== LISTA DE PRODUCTOS ===== */
+
+/* Contenedor de productos */
 .lista-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.lista-productos::-webkit-scrollbar {
-  height: 6px;
-}
+/* Tarjeta de producto */
 
-.lista-productos::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-}
+
 
 .producto {
+  background: #ffffff;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+
   flex: 0 0 auto;
   /* no se encoge */
   min-width: 160px;
-  
-  background: white;
+
   border-radius: 14px;
   padding: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
@@ -208,22 +209,51 @@ h2 {
   transform: scale(1.02);
 }
 
+
+
 .producto.activo {
   border-color: var(--azul-profundo);
   background-color: #e8f0ff;
   transform: scale(1.03);
+  outline: 3px solid #0b4f8a;
+
 }
 
 .producto .nombre {
   font-size: 0.9rem;
   font-weight: 600;
+  font-size: 14px;
+
 }
+
+
+/* Texto */
+
 
 .producto .precio {
   margin-top: 6px;
+
   font-weight: bold;
   color: var(--azul-profundo);
 }
+
+
+@media (max-width: 480px) {
+  .lista-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.lista-productos::-webkit-scrollbar {
+  height: 6px;
+}
+
+.lista-productos::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
 
 /* ===== HISTORIAL ===== */
 .historial-dia {
@@ -296,13 +326,19 @@ h2 {
   }
 }
 
+
+
+/* ===== FIX TARJETAS EN CELULAR ===== */
 @media (max-width: 768px) {
   .lista-productos {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .producto {
-    min-width: 160px;
+    min-width: 0;
+    width: 100%;
   }
 }
 
@@ -325,5 +361,31 @@ h2 {
   .reporte-sticky {
     position: sticky;
     top: 90px;
+  }
+}
+
+
+/* ===== FIX BOTONES DE LINEAS EN CELULAR ===== */
+@media (max-width: 768px) {
+  .filtro-lineas {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+
+  .linea-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    min-width: max-content;
+  }
+
+  .filtro-lineas::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .filtro-lineas::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
   }
 }
