@@ -1,12 +1,12 @@
 export const productos = [{
         item: "7810",
         nombre: "SHAMPOO BIOELIXIR X300ml",
-        precio: 38600
+        precio: 52360
     },
     {
         item: "7935",
         nombre: "ACOND BIOELIXIR X300cc",
-        precio: 38600
+        precio: 52360
     },
     {
         item: "7926",
@@ -16,39 +16,39 @@ export const productos = [{
     {
         item: "8044",
         nombre: "TRATAMIENTO BIOELIXIR X300g",
-        precio: 53600
+        precio: 68000
     },
 
     {
         item: "7808",
         nombre: "SHAMPOO PLEXIPRO n1 X300ml",
-        precio: 52100
+        precio: 57900
     },
     {
         item: "7809",
         nombre: "ACOND PLEXIPRO n2 X300cc",
-        precio: 52100
+        precio: 57900
     },
     {
         item: "7805",
         nombre: "TRAT PLEXIPRO n3 X100cc",
-        precio: 65450
+        precio: 72900
     },
     {
         item: "7803",
         nombre: "LEAVE IN SERUM PLEXIPRO n4 X100ml",
-        precio: 54200
+        precio: 56000
     },
 
     {
         item: "7787",
         nombre: "SHAMP ACID HIALUR X400ml",
-        precio: 34000
+        precio: 32000
     },
     {
         item: "7788",
         nombre: "ACOND ACID HIALUR X400ml",
-        precio: 34000
+        precio: 32000
     },
     {
         item: "7789",
@@ -69,28 +69,28 @@ export const productos = [{
     {
         item: "7907",
         nombre: "SHAMP CREXIFORTE MEN X300ml",
-        precio: 33100
+        precio: 29500
     },
     {
         item: "7916",
         nombre: "ACOND CREXIFORTE MEN X300ml",
-        precio: 33100
+        precio: 28500
     },
     {
         item: "7905",
         nombre: "TONICO CREXIFORTE MEN X60ml",
-        precio: 42600
+        precio: 49500
     },
 
     {
         item: "7929",
         nombre: "SHAMP CREXIFORTE MUJER X300ml",
-        precio: 33100
+        precio: 38500
     },
     {
         item: "7959",
         nombre: "ACOND CREXIFORTE MUJER X300ml",
-        precio: 33100
+        precio: 38500
     },
     {
         item: "7930",
@@ -101,12 +101,12 @@ export const productos = [{
     {
         item: "7473",
         nombre: "SHAMP PODER ANTICASPA X300cc",
-        precio: 33100
+        precio: 33118
     },
     {
         item: "7474",
         nombre: "ACOND PODER ANTICASPA X300ml",
-        precio: 33100
+        precio: 33118
     },
 
     {
@@ -132,7 +132,7 @@ export const productos = [{
     {
         item: "7770",
         nombre: "CREMA FACIAL DERMA B X260ml",
-        precio: 55000
+        precio: 42600
     },
 
     {
@@ -143,17 +143,17 @@ export const productos = [{
     {
         item: "6226",
         nombre: "SHAMP 6 OLEOS X400ml",
-        precio: 34000
+        precio: 28200
     },
     {
         item: "6228",
         nombre: "CREMA PEINAR 6 OLEOS X300ml",
-        precio: 34000
+        precio: 28200
     },
     {
         item: "6293",
         nombre: "CREMA CAPILAR 6 OLEOS INTENS X300ml",
-        precio: 34000
+        precio: 27200
     },
     {
         item: "6283",
@@ -164,17 +164,17 @@ export const productos = [{
     {
         item: "6447",
         nombre: "SHAMP CEBOLLA X400ml",
-        precio: 31100
+        precio: 28500
     },
     {
         item: "6448",
         nombre: "ACOND CEBOLLA X400ml",
-        precio: 31100
+        precio: 28500
     },
     {
         item: "6449",
         nombre: "CREMA CAPILAR CEBOLLA X300ml",
-        precio: 31100
+        precio: 28500
     },
 
     {
@@ -186,17 +186,17 @@ export const productos = [{
     {
         item: "6225",
         nombre: "ACOND ACTIVADOR RIZOS X400ml",
-        precio: 53900
+        precio: 29500
     },
     {
         item: "6308",
         nombre: "SHAMP ACTIVADOR RIZOS X400ml",
-        precio: 53900
+        precio: 29500
     },
     {
         item: "6229",
         nombre: "CREMA HIDRATANTE ACTIVADORA RIZOS X300ml",
-        precio: 48600
+        precio: 25000
     },
 
     {
@@ -217,7 +217,7 @@ export const productos = [{
     {
         item: "0002",
         nombre: "RELADIL",
-        precio: 34000
+        precio: 30800
     },
     {
         item: "0003",
@@ -228,6 +228,11 @@ export const productos = [{
         item: "0004",
         nombre: "COXETOR",
         precio: 42000
+    },
+    {
+        item: "0005",
+        nombre: "HIRUDOID",
+        precio: 68000
     }
 ];
 
