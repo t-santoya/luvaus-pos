@@ -102,7 +102,8 @@ function App() {
     }
 
     const nuevaVenta = {
-      id: Date.now(),
+      // id: Date.now(),
+      id: new Date().getTime(),
       fecha: fechaSeleccionada,
       item: productoSeleccionado.item,
       linea: obtenerLinea(productoSeleccionado),
@@ -112,6 +113,7 @@ function App() {
     };
 
     setVentas([...ventas, nuevaVenta]);
+    enviarAGoogleSheets(nuevaVenta); 
     setProductoSeleccionado(null);
     setMetodoPago("");
   };
@@ -129,7 +131,20 @@ function App() {
     (s, v) => s + v.precio,
     0
   );
+// *********************************************
 
+  const enviarAGoogleSheets = async (venta) => {
+  try {
+    await fetch("https://script.google.com/macros/s/AKfycbwg-hexslb4ucHTP6RFxlWIwuIzmMlK-1XQ3PHS-IYH-qoLl_xZI5GBP0ZwnJWbUgT_/exec", {
+      method: "POST",
+      body: JSON.stringify(venta),
+    });
+  } catch (error) {
+    console.error("Error enviando:", error);
+  }
+};
+
+// *********************************************
   /* ================= EXCEL ================= */
   const exportarExcel = () => {
     if (ventasDelDia.length === 0) {
