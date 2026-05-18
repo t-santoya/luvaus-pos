@@ -1,12 +1,12 @@
 export const productos = [{
         item: "7810",
         nombre: "SHAMPOO BIOELIXIR X300ml",
-        precio: 52360
+        precio: 52500
     },
     {
         item: "7935",
         nombre: "ACOND BIOELIXIR X300cc",
-        precio: 52360
+        precio: 52500
     },
     {
         item: "7926",
@@ -101,12 +101,12 @@ export const productos = [{
     {
         item: "7473",
         nombre: "SHAMP PODER ANTICASPA X300cc",
-        precio: 33118
+        precio: 33500
     },
     {
         item: "7474",
         nombre: "ACOND PODER ANTICASPA X300ml",
-        precio: 33118
+        precio: 33500
     },
 
     {
@@ -230,9 +230,19 @@ export const productos = [{
         precio: 42000
     },
     {
+        item: "0006",
+        nombre: "VICOXIL",
+        precio: 60000
+    },
+    {
+        item: "0007",
+        nombre: "FLEBIUM",
+        precio: 150000
+    },
+    {
         item: "0005",
         nombre: "HIRUDOID",
-        precio: 68000
+        precio: 72000
     }
 ];
 
