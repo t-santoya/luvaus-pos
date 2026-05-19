@@ -9,28 +9,32 @@ import {
 export default defineConfig({
   plugins: [
     react(),
+
     VitePWA({
       registerType: 'autoUpdate',
+
       manifest: {
         name: 'LUVAUS',
         short_name: 'LUVAUS',
-        start_url: '/',
-        display: 'standalone',
-        background_color: '#0b3f63',
+        description: 'Sistema de ventas LUVAUS',
+
         theme_color: '#0b3f63',
-        orientation: 'portrait',
+        background_color: '#0b3f63',
+
+        display: 'standalone',
+
         icons: [{
             src: '/icon-192.png',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/png'
           },
           {
             src: '/icon-512.png',
             sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-      },
-    }),
-  ],
+            type: 'image/png'
+          }
+        ]
+      }
+    })
+  ]
 })
